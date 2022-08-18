@@ -1,6 +1,5 @@
 const form = document.querySelector('.form')
 const searchVideoResult = document.querySelector('.search-video-result')
-
 const optionsAPI = {
   method: 'GET',
   headers: {
