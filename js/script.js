@@ -1,4 +1,6 @@
 const form = document.querySelector('.form')
+const searchVideoResult = document.querySelector('.search-video-result')
+
 const optionsAPI = {
   method: 'GET',
   headers: {
@@ -23,12 +25,14 @@ async function searchVideo(text) {
 }
 
 function createIframe(youtubeID) {
+  searchVideoResult.innerHTML = ''
   const iframe = document.createElement('iframe')
   iframe.setAttribute('src', `https://www.youtube.com/embed/${youtubeID}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen`)
   iframe.setAttribute('frameborder', `0`)
   iframe.setAttribute('allow', `autoplay; encrypted-media`)
   iframe.setAttribute('allowfullscreen', 'allowfullscreen')
-  form.insertAdjacentElement('afterend', iframe)
+  searchVideoResult.append(iframe)
+  iframe.setAttribute('height', iframe.offsetWidth * 9 / 16)
 }
 
 form.addEventListener('submit', (e) => {
