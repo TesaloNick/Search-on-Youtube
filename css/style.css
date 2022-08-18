@@ -1,0 +1,42 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+@media (max-width: 1330px) {
+  .container {
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.form__input {
+  border: 1px solid black;
+  border-radius: 10px 0 0 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.form__button {
+  font-size: 20px;
+}
+
+iframe {
+  width: 560px;
+  height: 315px;
+}
+/*# sourceMappingURL=style.css.map */
